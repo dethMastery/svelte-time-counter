@@ -3,8 +3,6 @@
 
 	const navButton = `p-4 hover:opacity-60`
 	const activeButton = `p-4 opacity-80 hover:opacity-80`
-
-	console.log($page.url.pathname);
 </script>
 
 <header>
