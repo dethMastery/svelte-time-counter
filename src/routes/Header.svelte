@@ -3,6 +3,8 @@
 
 	const navButton = `p-4 hover:opacity-60`
 	const activeButton = `p-4 opacity-80 hover:opacity-80`
+
+	console.log($page.url.pathname);
 </script>
 
 <header>
@@ -21,6 +23,17 @@
 			
 		</div>
 		<div class="w-full justify-end text-right">
+			{#if $page.url.pathname === '/counts'}
+				<!-- svelte-ignore a11y-invalid-attribute -->
+				<a href="#" class={activeButton}>
+					CountDown
+				</a>
+			{:else}
+				<a href="/counts" class={navButton}>
+					CountDown
+				</a>
+			{/if}
+
 			{#if $page.url.pathname === '/about'}
 				<!-- svelte-ignore a11y-invalid-attribute -->
 				<a href="#" class={activeButton}>
