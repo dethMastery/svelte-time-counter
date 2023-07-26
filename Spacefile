@@ -1,0 +1,8 @@
+# Spacefile Docs: https://go.deta.dev/docs/spacefile/v0
+v: 0
+micros:
+  - name: svelte-time-counter
+    src: ./
+    engine: svelte-kit
+    primary: true
+    public: true
