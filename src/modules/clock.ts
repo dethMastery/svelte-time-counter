@@ -1,4 +1,4 @@
-import { TimeConversion, dayConversion, monthConversion } from "./converter"
+import { ClockTime, dayConversion, monthConversion } from "./converter"
 
 function Time() {
   const current = new Date(new Date().getTime())
@@ -6,7 +6,7 @@ function Time() {
   const currentDate = `${dayConversion(current.getDay())} ${current.getDate()} ${monthConversion(current.getMonth())} ${current.getFullYear()}`
   const final = {
     date: currentDate,
-    time: TimeConversion(current.getTime()),
+    time: ClockTime(current.getTime()),
     timeStamp: (current.getTime())
   }
 

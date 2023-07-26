@@ -58,3 +58,17 @@ export function TimeConversion(timeStamp: number) {
 
   return timeLine
 }
+
+export function ClockTime (timeStamp: number) {
+	let hour = ((Math.floor((timeStamp % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) + 7) % 24).toString();
+	let min = Math.floor((timeStamp % (1000 * 60 * 60)) / (1000 * 60)).toString();
+	let sec = Math.floor((timeStamp % (1000 * 60)) / 1000).toString();
+
+	hour = (hour.length < 2) ? `0${hour}` : hour
+  min = (min.length < 2) ? `0${min}` : min
+  sec = (sec.length < 2) ? `0${sec}` : sec
+
+  const timeLine = `${hour} : ${min} : ${sec}`
+
+  return timeLine
+}
