@@ -47,7 +47,7 @@ export function monthConversion(month: number) {
 }
 
 export function TimeConversion(timeStamp: number) {
-	const hour = Math.floor((timeStamp % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) + 7;
+	const hour = Math.floor((timeStamp % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 	let min = Math.floor((timeStamp % (1000 * 60 * 60)) / (1000 * 60)).toString();
 	let sec = Math.floor((timeStamp % (1000 * 60)) / 1000).toString();
 
